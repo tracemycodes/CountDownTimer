@@ -8,7 +8,7 @@
   font-family: Arial, Helvetica, sans-serif;
   height: 100vh;
   width: 100vw;
-  background: url("../images/bg-stars.svg") top/100% 80% no-repeat,
+  background: url("./images/bg-stars.svg") top/100% 80% no-repeat,
     url("./images/pattern-hills.svg") bottom/100% 20% no-repeat,
     linear-gradient(to bottom, #1e1e28, #251d2c);
   background-repeat: no-repeat;
@@ -221,13 +221,28 @@
   position: absolute;
   bottom: 0;
   width: 100%;
+  height: 15%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
+  /* border: 2px solid goldenrod; */
 }
 
-.footer a {
+.footer div a {
   margin: 0.7rem;
+}
+
+.footer p {
+  padding-top: 2rem;
+  color: hsl(237, 18%, 59%);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.footer p a {
+  color: hsl(345, 95%, 68%);
 }
 
 @media (max-width: 360px) {
