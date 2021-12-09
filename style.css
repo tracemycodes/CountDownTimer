@@ -95,7 +95,7 @@
   content: " ";
   width: 0.35rem;
   height: 0.7rem;
-  border-radius: 1rem 0 0 1rem;
+  border-radius: 0.7rem 0 0 0.7rem;
   position: absolute;
   background-color: rgba(22, 21, 21, 0.837);
   top: 45%;
@@ -217,6 +217,10 @@
   text-align: center;
 }
 
+section {
+  /* border: 2px solid salmon; */
+}
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -224,10 +228,8 @@
   height: 15%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   padding: 2rem;
-  /* border: 2px solid goldenrod; */
 }
 
 .footer div a {
@@ -235,7 +237,7 @@
 }
 
 .footer p {
-  padding-top: 2rem;
+  margin-top: 0.4rem;
   color: hsl(237, 18%, 59%);
   font-size: 0.9rem;
   font-weight: 600;
@@ -245,7 +247,7 @@
   color: hsl(345, 95%, 68%);
 }
 
-@media (max-width: 360px) {
+@media (max-width: 370px) {
   .count-down {
     font-size: 2rem;
     padding: 0.7rem;
@@ -260,32 +262,39 @@
   }
   .div-two p {
     margin-top: calc(-50% + 0.6rem);
-    /* margin-bottom: 20%; */
   }
   .div-one p {
     margin-top: 19%;
   }
-}
-
-@media (max-width: 360px) {
-  .count-down {
-    font-size: 2rem;
-    padding: 0.7rem;
+  .count-down::after {
+    width: 0.25rem;
+    height: 0.5rem;
+    border-radius: 0 0.5rem 0.5rem 0;
   }
-  .count-up {
-    font-size: 2rem;
-    padding: 0.7rem;
+  .count-down::before {
+    width: 0.25rem;
+    height: 0.5rem;
+    border-radius: 0.5rem 0 0 0.5rem;
   }
-  .count-set {
-    margin-top: 0.8rem;
-    font-size: 0.4rem;
+  .count-down-flip .div-two::before {
+    width: 0.25rem;
+    height: 0.25rem;
+    border-radius: 0 0 0 100%;
   }
-  .div-two p {
-    margin-top: calc(-50% + 0.6rem);
-    /* margin-bottom: 20%; */
+  .count-down-flip .div-two::after {
+    width: 0.25rem;
+    height: 0.25rem;
+    border-radius: 0 0 100% 0;
   }
-  .div-one p {
-    margin-top: 19%;
+  .count-up-flip .div-one::before {
+    width: 0.25rem;
+    height: 0.25rem;
+    border-radius: 100% 0 0 0;
+  }
+  .count-up-flip .div-one::after {
+    width: 0.25rem;
+    height: 0.25rem;
+    border-radius: 0 100% 0 0;
   }
 }
 
