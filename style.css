@@ -40,7 +40,7 @@
   max-width: 52rem;
   height: 60%;
 }
-
+/* 3D perspective space */
 .count-flip {
   border-radius: 0.5rem;
   background-color: hsl(237, 19%, 22%);
@@ -48,10 +48,9 @@
   perspective: 700px;
 }
 
+/* Bottom number of current count */
 .count-down {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   font-size: 3rem;
   font-weight: 700;
   padding: 1rem;
@@ -86,36 +85,38 @@
   }
 }
 
+/*  */
 .count-up::before {
   content: " ";
   position: absolute;
-  width: 100%;
-  border-bottom: 2px solid rgba(55, 54, 54, 0.145);
+  width: calc(100% - 0.7rem);
+  border: 0.5px solid rgba(31, 31, 31, 0.337);
   z-index: 1;
-  top: 50%;
-  left: 0;
+  top: calc(50% - 1px);
+  left: 0.35rem;
 }
 
 .count-down::after {
   content: " ";
   width: 0.35rem;
-  height: 0.7rem;
+  height: calc(0.7rem - 2px);
   border-radius: 0 0.7rem 0.7rem 0;
   position: absolute;
   background-color: rgba(22, 21, 21, 0.837);
-  top: 45%;
+  top: calc(50% - calc(0.35rem - 1px));
   left: 0;
   z-index: -1;
+  /* border: 2px solid blue; */
 }
 
 .count-down::before {
   content: " ";
   width: 0.35rem;
-  height: 0.7rem;
+  height: calc(0.7rem - 2px);
   border-radius: 0.7rem 0 0 0.7rem;
   position: absolute;
   background-color: rgba(22, 21, 21, 0.837);
-  top: 45%;
+  top: calc(50% - calc(0.35rem - 1px));
   right: 0;
   z-index: -1;
 }
@@ -131,75 +132,88 @@
 .count-down-flip {
   transform: rotateX(180deg);
   backface-visibility: hidden;
+  /* border: 1px solid magenta; */
 }
 
 .count-down-flip .div-two {
   background-color: hsl(237, 19%, 22%);
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
-  display: flex;
+  border: none;
+  /* display: flex;
   justify-content: center;
   align-items: flex-start;
+  position: relative; */
   position: relative;
 }
 
 .count-down-flip .div-two::before {
   content: " ";
-  width: 0.35rem;
+  width: calc(0.35rem + 1px);
   height: 0.35rem;
   border-radius: 0 0 0 100%;
   position: absolute;
   background-color: rgba(22, 21, 21, 0.837);
-  top: 0;
+  top: -1px;
   right: 0;
   z-index: 1;
 }
 
 .count-down-flip .div-two::after {
   content: " ";
-  width: 0.35rem;
+  width: calc(0.35rem + 1px);
   height: 0.35rem;
   border-radius: 0 0 100% 0;
   position: absolute;
   background-color: rgba(22, 21, 21, 0.837);
-  top: 0;
+  top: -1px;
   left: 0;
   z-index: 1;
+  /* border: 2px solid yellow; */
 }
 
 .count-up-flip .div-one {
   background-color: hsl(237, 19%, 22%);
+  /* border-bottom: 1px solid hsla(0, 0%, 31%, 0.001); */
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
   z-index: -4;
   position: relative;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: flex-start; */
+  /* text-align: center; */
+  border: none;
+  /* border-bottom: 2px solid rgba(55, 54, 54, 0.145); */
+  /* border: 1px solid yellow; */
 }
 
 .count-up-flip .div-one::before {
   content: " ";
+  /* width: calc(0.35rem + 1px); */
   width: 0.35rem;
   height: 0.35rem;
   border-radius: 100% 0 0 0;
   position: absolute;
   background-color: rgba(22, 21, 21, 0.837);
-  bottom: 0;
+  bottom: -1px;
   right: 0;
   z-index: 1;
+  /* border: 2px solid green; */
 }
 
 .count-up-flip .div-one::after {
   content: " ";
+  /* width: calc(0.35rem + 1px); */
   width: 0.35rem;
   height: 0.35rem;
   border-radius: 0 100% 0 0;
   position: absolute;
   background-color: rgba(22, 21, 21, 0.837);
-  bottom: 0;
+  bottom: -1px;
   left: 0;
-  z-index: 1;
+  z-index: 5;
+  /* border: 2px solid brown; */
 }
 
 .div-one,
@@ -207,14 +221,61 @@
   height: 50%;
   width: 100%;
   overflow: hidden;
+  display: flex;
+  /* border: 1px solid palegoldenrod; */
 }
-
+.div-one {
+  /* display: flex; */
+  /* padding-top: 5rem; */
+  /* justify-content: center;
+  align-items: center; */
+  /* border: none; */
+  /* border: 1px solid gold; */
+}
 .div-one p {
-  margin-top: calc(25% - 0.35rem);
+  /* text-align: center; */
+  margin: 1rem auto 0;
+  /* border: 1px solid gold; */
+  /* border: none; */
 }
 
+.count-down-flip .div-two {
+  /* border: 1px solid white; */
+  /* padding-top: -1rem; */
+  /* margin: 8rem; */
+  /* position: relative; */
+  /* overflow: hidden; */
+  /* text-align: start; */
+  /* transform: rotateX(180deg); */
+  display: flex;
+  align-items: flex-end;
+  /* justify-content: right; */
+}
 .div-two p {
-  margin-top: calc(-25% - 0.4rem);
+  /* text-align: center; */
+  /* display: flex;
+  align-self: flex-start;
+  justify-items: flex-end; */
+  /* margin: -1rem auto 2rem; */
+  /* margin-bottom: 1rem; */
+  /* border: 1px solid firebrick; */
+  /* display: inline-block; */
+  /* text-align: justify; */
+  /* position: relative; */
+  /* height: 100%; */
+  margin: 0 auto 1rem;
+
+  /* justify-self: center; */
+  /* padding: 0; */
+  /* margin: 1rem auto; */
+
+  /* padding-bottom: 1rem; */
+
+  /* position: absolute; */
+  /* top: -25%; */
+  /* width: 100%; */
+  /* height: 100%; */
+  /* top: -50%; */
 }
 
 .count-set {
@@ -239,6 +300,15 @@
   margin: 0 0.7rem;
 }
 
+.footer div a img:hover {
+  fill: aqua;
+}
+
+.svg {
+  fill: red;
+  color: aqua;
+}
+
 .footer p {
   margin-top: 0.4rem;
   color: hsl(237, 18%, 59%);
@@ -250,9 +320,12 @@
   color: hsl(345, 95%, 68%);
 }
 
-@media (max-width: 300px) {
-  .countdown-display {
-    margin: 4rem 0;
+@media (max-width: 330px) {
+  /* .countdown-display {
+    margin: -4rem 0;
+  } */
+  .header-text {
+    font-size: 1rem;
   }
   .count-down {
     font-size: 2rem;
@@ -267,21 +340,32 @@
     font-size: 0.4rem;
   }
   .div-two p {
-    margin-top: calc(-50% + 0.45rem);
+    margin: 0 auto 0.5rem;
   }
   .div-one p {
-    margin-top: 15%;
+    margin: 0.5rem auto 0;
+  }
+  .count-up::before {
+    width: calc(100% - 0.5rem);
+    left: 0.25rem;
   }
   .count-down::after {
     width: 0.25rem;
-    height: 0.5rem;
+    height: calc(0.5rem - 2px);
     border-radius: 0 0.5rem 0.5rem 0;
+    /* top: calc(50% - calc(0.25rem - 0.5px)); */
+    top: calc(50% - calc(0.25rem - 1px));
+    /* border: 2px solid green; */
   }
+
   .count-down::before {
     width: 0.25rem;
-    height: 0.5rem;
+    height: calc(0.5rem - 2px);
     border-radius: 0.5rem 0 0 0.5rem;
+    /* top: calc(50% - calc(0.25rem - 0.5px)); */
+    top: calc(50% - calc(0.25rem - 1px));
   }
+
   .count-down-flip .div-two::before {
     width: 0.25rem;
     height: 0.25rem;
@@ -296,6 +380,9 @@
     width: 0.25rem;
     height: 0.25rem;
     border-radius: 100% 0 0 0;
+    /* border: 2px solid green; */
+    z-index: 6;
+    bottom: 0;
   }
   .count-up-flip .div-one::after {
     width: 0.25rem;
@@ -304,7 +391,7 @@
   }
 }
 
-@media (min-width: 320px) {
+@media (min-width: 330px) {
   .count-down {
     font-size: 3rem;
     padding: 0.7rem;
@@ -318,41 +405,31 @@
     font-size: 0.4rem;
   }
   .div-two p {
-    margin-top: calc(-50% + 0.4rem);
+    margin: 0 auto 0.7rem;
   }
   .div-one p {
-    margin-top: 17%;
+    margin: 0.7rem auto 0;
   }
-  0 .count-down::after {
+  /* .count-down::after {
     width: 0.25rem;
     height: 0.5rem;
     border-radius: 0 0.5rem 0.5rem 0;
-  }
-  .count-down::before {
+  } */
+  /* .count-down::after {
     width: 0.25rem;
-    height: 0.5rem;
+    height: calc(0.7rem - 2px);
+    border-radius: 0 0.5rem 0.5rem 0;
+  } */
+  /* debugging css style attributes here */
+
+  .count-up-flip .div-one {
+    /* outline: 1px solid yellow; */
+  }
+  /* .count-down::before {
+    width: 0.25rem;
+    height: calc(0.7rem - 2px);
     border-radius: 0.5rem 0 0 0.5rem;
-  }
-  .count-down-flip .div-two::before {
-    width: 0.25rem;
-    height: 0.25rem;
-    border-radius: 0 0 0 100%;
-  }
-  .count-down-flip .div-two::after {
-    width: 0.25rem;
-    height: 0.25rem;
-    border-radius: 0 0 100% 0;
-  }
-  .count-up-flip .div-one::before {
-    width: 0.25rem;
-    height: 0.25rem;
-    border-radius: 100% 0 0 0;
-  }
-  .count-up-flip .div-one::after {
-    width: 0.25rem;
-    height: 0.25rem;
-    border-radius: 0 100% 0 0;
-  }
+  } */
 }
 
 @media (min-width: 500px) {
@@ -368,39 +445,19 @@
     margin-top: 1.3rem;
     font-size: 0.8rem;
   }
+
+  .count-up-flip .div-one {
+    /* border: 0.2px solid yellow; */
+  }
   .div-two p {
-    margin-top: calc(-50% + 1.1rem);
+    margin: 0 auto 1.2rem;
   }
   .div-one p {
-    margin-top: 19%;
-  }
-  .count-down::after {
-    width: 0.35rem;
-    height: 0.7rem;
-  }
-  .count-down::before {
-    width: 0.35rem;
-    height: 0.7rem;
-  }
-  .count-down-flip .div-two::before {
-    width: 0.35rem;
-    height: 0.35rem;
-  }
-  .count-down-flip .div-two::after {
-    width: 0.35rem;
-    height: 0.35rem;
-  }
-  .count-up-flip .div-one::before {
-    width: 0.35rem;
-    height: 0.35rem;
-  }
-  .count-up-flip .div-one::after {
-    width: 0.35rem;
-    height: 0.35rem;
+    margin: 1.2rem auto 0;
   }
 }
 
-@media (min-width: 760px) {
+@media (min-width: 750px) {
   .count-down {
     font-size: 5.5rem;
     padding: 1.5rem;
@@ -414,33 +471,14 @@
     font-size: 0.8rem;
   }
   .div-two p {
-    margin-top: calc(-50% + 1.2rem);
+    /* margin-top: calc(-50% + 1.2rem); */
+    margin: 0 auto 1.5rem;
   }
   .div-one p {
-    margin-top: 16.5%;
+    margin: 1.5rem auto 0;
+    /* border: 0.2px solid rgb(0, 81, 255); */
   }
-  .count-down::after {
-    width: 0.35rem;
-    height: 0.7rem;
-  }
-  .count-down::before {
-    width: 0.35rem;
-    height: 0.7rem;
-  }
-  .count-down-flip .div-two::before {
-    width: 0.35rem;
-    height: 0.35rem;
-  }
-  .count-down-flip .div-two::after {
-    width: 0.35rem;
-    height: 0.35rem;
-  }
-  .count-up-flip .div-one::before {
-    width: 0.35rem;
-    height: 0.35rem;
-  }
-  .count-up-flip .div-one::after {
-    width: 0.35rem;
-    height: 0.35rem;
+  .count-up-flip .div-one {
+    /* border: 0.2px solid rgb(0, 81, 255); */
   }
 }
