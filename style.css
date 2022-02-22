@@ -291,7 +291,7 @@
   color: hsl(345, 95%, 68%);
 }
 
-@media (max-width: 330px) {
+@media (max-width: 20.625rem) {
   .header-text {
     font-size: 1rem;
   }
@@ -355,7 +355,7 @@
   }
 }
 
-@media (min-width: 330px) {
+@media (min-width: 20.625rem) {
   .count-down {
     font-size: 3rem;
     padding: 0.7rem;
@@ -396,7 +396,7 @@
   } */
 }
 
-@media (min-width: 500px) {
+@media (min-width: 31.25rem) {
   .count-down {
     font-size: 3.5rem;
     padding: 1.2rem;
@@ -409,9 +409,6 @@
     margin-top: 1.3rem;
     font-size: 0.8rem;
   }
-
-  .count-up-flip .div-one {
-  }
   .div-two p {
     margin: 0 auto 1.2rem;
   }
@@ -420,7 +417,7 @@
   }
 }
 
-@media (min-width: 750px) {
+@media (min-width: 46.875rem) {
   .count-down {
     font-size: 5.5rem;
     padding: 1.5rem;
@@ -438,7 +435,5 @@
   }
   .div-one p {
     margin: 1.5rem auto 0;
-  }
-  .count-up-flip .div-one {
   }
 }
