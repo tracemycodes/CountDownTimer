@@ -28,6 +28,10 @@ const countTimeObj = countTime({
   seconds: Number(15) + 2,
 });
 
+console.log(Date.parse(countTimeObj));
+console.log(typeof countTimeObj);
+console.log(countTimeObj);
+
 const calculateCount = () => {
   const countDate = Date.parse(countTimeObj) - new Date().getTime(),
     days = Math.floor(countDate / (1000 * 60 * 60 * 24));
@@ -105,8 +109,8 @@ const animate = (number, time, elem) => {
     setTimeout((stopAnimation) => {
       elem.classList.add("animate-flip");
     }, 100);
-    elem.classList.remove("animate-flip");
   }
+  elem.classList.remove("animate-flip");
 }
 
 setInterval(dothis, 1000);
