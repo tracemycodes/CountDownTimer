@@ -375,14 +375,6 @@
     }
   }
 
-  .animate-flip {
-    animation: flipCard 0.6s linear 1;
-    -webkit-animation: flipCard 0.6s linear 1;
-    -moz-animation: flipCard 0.6s linear 1;
-    -ms-animation: flipCard 0.6s linear 1;
-    -o-animation: flipCard 0.6s linear 1;
-  }
-
   @keyframes flipCard {
     from {
       transform: rotateX(0deg);
@@ -392,7 +384,7 @@
     }
   }
 
-  @-webkit-keyframes 'flipCard' {
+  @-webkit-keyframes flipCard {
     from {
       -webkit-transform: rotateX(0deg);
     }
@@ -401,7 +393,7 @@
     }
   }
 
-  @-moz-keyframes 'flipCard' {
+  @-moz-keyframes flipCard {
     from {
       -moz-transform: rotateX(0deg);
     }
@@ -410,13 +402,21 @@
     }
   }
 
-  @-ms-keyframes 'flipCard' {
+  @-o-keyframes flipCard {
     from {
       -ms-transform: rotateX(0deg);
     }
     to {
       -ms-transform: rotateX(-180deg);
     }
+  }
+
+  .animate-flip {
+    animation: flipCard 0.6s linear 1;
+    -webkit-animation: flipCard 0.6s linear 1;
+    -moz-animation: flipCard 0.6s linear 1;
+    -ms-animation: flipCard 0.6s linear 1;
+    -o-animation: flipCard 0.6s linear 1;
   }
 }
 
