@@ -384,43 +384,37 @@
   }
 
   @keyframes flipCard {
-    0% {
+    from {
       transform: rotateX(0deg);
     }
-    100% {
+    to {
       transform: rotateX(-180deg);
     }
   }
 
-  @-webkit-keyframes flipCard {
-    0% {
-      transform: rotateX(0deg);
+  @-webkit-keyframes 'flipCard' {
+    from {
       -webkit-transform: rotateX(0deg);
     }
-    100% {
-      transform: rotateX(-180deg);
+    to {
       -webkit-transform: rotateX(-180deg);
     }
   }
 
-  @-moz-keyframes flipCard {
-    0% {
-      transform: rotateX(0deg);
+  @-moz-keyframes 'flipCard' {
+    from {
       -moz-transform: rotateX(0deg);
     }
-    100% {
-      transform: rotateX(-180deg);
+    to {
       -moz-transform: rotateX(-180deg);
     }
   }
 
-  @-ms-keyframes flipCard {
-    0% {
-      transform: rotateX(0deg);
+  @-ms-keyframes 'flipCard' {
+    from {
       -ms-transform: rotateX(0deg);
     }
-    100% {
-      transform: rotateX(-180deg);
+    to {
       -ms-transform: rotateX(-180deg);
     }
   }

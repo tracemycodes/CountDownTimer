@@ -113,9 +113,9 @@ const animate = (number, time, elem) => {
   elem.classList.remove("animate-flip");
 }
 
-setInterval(dothis, 1000);
+setInterval(doThis, 1000);
 
-function dothis() {
+function doThis() {
   calculateCount();
   displayCount();
 }
