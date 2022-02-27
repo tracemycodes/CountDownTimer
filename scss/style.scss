@@ -69,8 +69,8 @@
 
   .count-flip {
     border-radius: 0.5rem;
-    background-color: hsl(237, 19%, 22%);
-    color: hsl(345, 95%, 68%);
+    background-color: #2d2f43;
+    color: #fb6087;
     perspective: 43.75rem;
     -webkit-perspective: 43.75rem;
     -moz-perspective: 43.75rem;
@@ -428,8 +428,17 @@
   align-items: center;
   justify-content: space-around;
 
+  > div a {
+    font-size: 1.5rem;
+  }
+
   a {
     margin: 0 0.7rem;
+    color: #505377;
+  }
+
+  a:hover {
+    color: hsl(345, 95%, 68%);
   }
 
   p {
